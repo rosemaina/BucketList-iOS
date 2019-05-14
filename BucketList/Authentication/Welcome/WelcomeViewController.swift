@@ -25,6 +25,10 @@ class WelcomeViewController: UIViewController {
         animateView()
     }
     
+    @IBAction func mainview(_ sender: Any) {
+//        let bucketVc = BucketListViewController.instantiate(fromAppStoryboard: .BucketList)
+//        present(bucketVc, animated: true, completion: nil)
+    }
     
     @IBAction func swipeUp(_ sender: UISwipeGestureRecognizer) {
         if sender.direction == .right {

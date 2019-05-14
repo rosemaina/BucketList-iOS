@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BucketLists-->
+        <scene sceneID="ZgQ-w8-6WI">
+            <objects>
+                <viewController storyboardIdentifier="BucketListViewController" id="kfY-vI-KMR" customClass="BucketListViewController" customModule="BucketList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tB2-1P-lEw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AdT-G0-cCJ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PFA-FB-sLA">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BucketListCollectionViewCell" id="2iN-qX-K7q" customClass="BucketListCollectionViewCell" customModule="BucketList" customModuleProvider="target">
+                                        <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.89415603880000005" green="0.59317917090000005" blue="0.079725593900000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="kfY-vI-KMR" id="Rbo-iA-61r"/>
+                                    <outlet property="delegate" destination="kfY-vI-KMR" id="vtn-fn-Fj7"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AdT-G0-cCJ" firstAttribute="trailing" secondItem="qjL-sg-HM5" secondAttribute="trailing" id="BYj-XX-qtz"/>
+                            <constraint firstItem="AdT-G0-cCJ" firstAttribute="leading" secondItem="qjL-sg-HM5" secondAttribute="leading" id="aof-uH-0e3"/>
+                            <constraint firstItem="AdT-G0-cCJ" firstAttribute="top" secondItem="tB2-1P-lEw" secondAttribute="top" constant="64" id="mWb-Lk-tdp"/>
+                            <constraint firstItem="AdT-G0-cCJ" firstAttribute="bottom" secondItem="tB2-1P-lEw" secondAttribute="bottom" id="se4-fx-Fli"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qjL-sg-HM5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="BucketLists" id="RaK-Sk-8yc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kVO-NF-JpZ">
+                            <connections>
+                                <segue destination="tNf-Xi-lfd" kind="show" id="Vcs-Yy-6Al"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="AdT-G0-cCJ" id="op9-Kf-yne"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Q5-gB-eHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="230"/>
+        </scene>
+        <!--Add Bucket View Controller-->
+        <scene sceneID="cIP-5A-mak">
+            <objects>
+                <viewController storyboardIdentifier="AddBucketViewController" id="tNf-Xi-lfd" customClass="AddBucketViewController" customModule="BucketList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1VD-hP-dlv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DeQ-wR-OjD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="125" id="K8e-aV-Pqe">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="125"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K8e-aV-Pqe" id="qWL-Mh-qOE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DeQ-wR-OjD" firstAttribute="trailing" secondItem="rGZ-zR-mGa" secondAttribute="trailing" id="470-Vm-2bL"/>
+                            <constraint firstItem="DeQ-wR-OjD" firstAttribute="top" secondItem="1VD-hP-dlv" secondAttribute="top" id="AoB-wD-Y2j"/>
+                            <constraint firstItem="DeQ-wR-OjD" firstAttribute="bottom" secondItem="1VD-hP-dlv" secondAttribute="bottom" id="HdM-R5-LNI"/>
+                            <constraint firstItem="DeQ-wR-OjD" firstAttribute="leading" secondItem="rGZ-zR-mGa" secondAttribute="leading" id="t07-Qc-N8p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rGZ-zR-mGa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FrP-Pg-VEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1548" y="-291"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7v8-Nw-ukE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HxA-Aa-U3v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="tvS-YV-LNP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ywa-Vn-C6u">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="kfY-vI-KMR" kind="relationship" relationship="rootViewController" id="Zq3-up-7kf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mHu-sE-Cy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="229.83508245877064"/>
+        </scene>
+    </scenes>
+</document>
