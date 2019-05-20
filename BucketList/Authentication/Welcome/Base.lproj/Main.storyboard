@@ -148,7 +148,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="wjp-PX-aA5" kind="show" id="gRH-iw-cNW"/>
+                                    <action selector="mainview:" destination="Umr-fz-LWx" eventType="touchUpInside" id="2sK-kh-sUg"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="7Gl-PE-aki">

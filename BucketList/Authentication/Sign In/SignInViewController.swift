@@ -28,8 +28,9 @@ class SignInViewController: UIViewController {
         // verify text is the same as the userdefaults
         
         // go to main view
-        let bucketVc = BucketListViewController.instantiate(fromAppStoryboard: .BucketList)
-        present(bucketVc, animated: true, completion: nil)
+        let sb = UIStoryboard.init(name: "BucketList", bundle: nil)
+        let nav = sb.instantiateInitialViewController()
+        self.present(nav!, animated: false, completion: nil)
     }
     
     @IBAction func clickToSignUp(_ sender: Any) {

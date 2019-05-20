@@ -28,7 +28,6 @@
 		50D5C6BA2285BD6700BDF013 /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D5C6B92285BD6700BDF013 /* BucketListViewController.swift */; };
 		50D5C6BC2285BEEB00BDF013 /* UICollectionCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D5C6BB2285BEEB00BDF013 /* UICollectionCell+Extension.swift */; };
 		50F77E2F2286189F00361E3E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F77E2E2286189F00361E3E /* UIViewController+Extension.swift */; };
-		50F77E3322886EB100361E3E /* UIStoryBoard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F77E3222886EB100361E3E /* UIStoryBoard+Extension.swift */; };
 		50F77E352288D6D600361E3E /* AddBucketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F77E342288D6D600361E3E /* AddBucketViewController.swift */; };
 		50F77E3B228A11FF00361E3E /* BucketListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F77E3A228A11FF00361E3E /* BucketListCollectionViewCell.swift */; };
 		50F77E3E228AA9CE00361E3E /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F77E3D228AA9CE00361E3E /* DesignableView.swift */; };
@@ -83,7 +82,6 @@
 		50D5C6B92285BD6700BDF013 /* BucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
 		50D5C6BB2285BEEB00BDF013 /* UICollectionCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionCell+Extension.swift"; sourceTree = "<group>"; };
 		50F77E2E2286189F00361E3E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		50F77E3222886EB100361E3E /* UIStoryBoard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryBoard+Extension.swift"; sourceTree = "<group>"; };
 		50F77E342288D6D600361E3E /* AddBucketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBucketViewController.swift; sourceTree = "<group>"; };
 		50F77E3A228A11FF00361E3E /* BucketListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListCollectionViewCell.swift; sourceTree = "<group>"; };
 		50F77E3D228AA9CE00361E3E /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
@@ -250,7 +248,6 @@
 				50D5C687228219FD00BDF013 /* UIView+Extension.swift */,
 				50D5C6BB2285BEEB00BDF013 /* UICollectionCell+Extension.swift */,
 				50F77E2E2286189F00361E3E /* UIViewController+Extension.swift */,
-				50F77E3222886EB100361E3E /* UIStoryBoard+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -430,7 +427,6 @@
 				50D5C68A228241F000BDF013 /* SignInViewController.swift in Sources */,
 				50D5C688228219FD00BDF013 /* UIView+Extension.swift in Sources */,
 				50D5C6BA2285BD6700BDF013 /* BucketListViewController.swift in Sources */,
-				50F77E3322886EB100361E3E /* UIStoryBoard+Extension.swift in Sources */,
 				50D5C6902282C9E500BDF013 /* SignUpViewController.swift in Sources */,
 				50D5C67C2280A22000BDF013 /* ContinueViewController.swift in Sources */,
 				50D5C6BC2285BEEB00BDF013 /* UICollectionCell+Extension.swift in Sources */,

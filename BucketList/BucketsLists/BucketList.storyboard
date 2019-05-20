@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HxA-Aa-U3v">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -34,8 +34,24 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="cSa-UY-8Or">
+                                                    <rect key="frame" x="162" y="162" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="IxA-co-keP"/>
+                                                        <constraint firstAttribute="width" constant="22" id="RGl-ek-8bA"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.89415603880000005" green="0.59317917090000005" blue="0.079725593900000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="cSa-UY-8Or" secondAttribute="trailing" constant="8" id="NJy-9o-Hc7"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="cSa-UY-8Or" secondAttribute="bottom" constant="8" id="zPX-QO-Csj"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="selectionImage" destination="cSa-UY-8Or" id="zDq-Qq-kCb"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -53,15 +69,26 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qjL-sg-HM5"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="trash" id="1Gf-VH-xar">
+                            <connections>
+                                <action selector="deleteSelected" destination="kfY-vI-KMR" id="LnZ-Mh-8W8"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="BucketLists" id="RaK-Sk-8yc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="UbG-qR-rOs"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kVO-NF-JpZ">
                             <connections>
                                 <segue destination="tNf-Xi-lfd" kind="show" id="Vcs-Yy-6Al"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addButton" destination="kVO-NF-JpZ" id="XCh-bF-sni"/>
                         <outlet property="collectionView" destination="AdT-G0-cCJ" id="op9-Kf-yne"/>
+                        <outlet property="deleteButton" destination="1Gf-VH-xar" id="ba4-NC-VRo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Q5-gB-eHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -108,7 +135,7 @@
         <!--Navigation Controller-->
         <scene sceneID="7v8-Nw-ukE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HxA-Aa-U3v" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="HxA-Aa-U3v" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="tvS-YV-LNP">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -116,6 +143,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ywa-Vn-C6u">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -124,7 +152,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mHu-sE-Cy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92" y="229.83508245877064"/>
+            <point key="canvasLocation" x="-103" y="230"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Unchecked" width="22" height="22"/>
+    </resources>
 </document>

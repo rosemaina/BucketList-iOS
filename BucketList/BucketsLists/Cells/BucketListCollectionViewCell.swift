@@ -10,6 +10,25 @@ import UIKit
 
 class BucketListCollectionViewCell: UICollectionViewCell {
     
+    // design the cell to display month and year -- capital letters -- white -- endless -- 200  by 200
+    // it should have an overlay || opacity of less than one
+    
+    @IBOutlet weak var selectionImage:UIImageView!
+    
+    var isEditing: Bool = false {
+        didSet {
+            selectionImage.isHidden = !isEditing
+        }
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            if isEditing {
+                selectionImage.image = isSelected ? UIImage(named: "Checked") : UIImage(named: "Unchecked")
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpView()

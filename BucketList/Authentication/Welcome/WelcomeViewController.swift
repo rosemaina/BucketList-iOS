@@ -26,8 +26,9 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func mainview(_ sender: Any) {
-//        let bucketVc = BucketListViewController.instantiate(fromAppStoryboard: .BucketList)
-//        present(bucketVc, animated: true, completion: nil)
+        let sb = UIStoryboard.init(name: "BucketList", bundle: nil)
+        let nav = sb.instantiateInitialViewController()
+        self.present(nav!, animated: false, completion: nil)
     }
     
     @IBAction func swipeUp(_ sender: UISwipeGestureRecognizer) {
